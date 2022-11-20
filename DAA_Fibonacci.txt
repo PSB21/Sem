@@ -1,0 +1,21 @@
+def fibonacci(n):
+    if (n<=1):
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+n = int(input("Enter number of terms:"))
+
+for i in range (n):
+    print(fibonacci(i),end = " ")
+
+#t = int(input("Enter number of terms: "))
+
+n1,n2 = 0,1
+print(n1,end = " ")
+
+for i in range (n-1):
+    temp = n2
+    n2 = n1+n2
+    n1 = temp
+    print(n1,end = " ")
